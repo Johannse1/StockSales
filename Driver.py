@@ -14,14 +14,13 @@ while choice != 1 or choice != 2: # the loop here is broken and i am not sure ho
         Num_stock = Stack()
         Price = Stack()
 
-
     else:
         Num_stock = Queue()
         Price = Queue()
 
 
 
-total_inventory = 0
+total_stock = 0
 total_profit = 0.0
 total_value_sold = 0
 
@@ -40,6 +39,18 @@ while menu_choice != 5:
         price = int(input("How much does each share cost?: "))
         total_cost = float(price * qty)
         Num_stock.push(qty)
+        Price.push(price)
+
+        total_stock += qty
+    elif menu_choice == 2:
+        qty_popped = Num_stock.pop()
+        price_of_pop = Price.pop()
+        print(f"Removed {qty_popped} from stock. ")
+
+
+
+
+
 
 
 
