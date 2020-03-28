@@ -5,7 +5,7 @@ from StackandQueue import Stack, Queue
 
 choice = 0
 
-while choice != 1 or choice != 2: # the loop here is broken and i am not sure how to fix it, i have spent the lst 4 hours on this loop alone trying to figure out why it wont work
+while choice != 1 and choice != 2: # the loop here is broken and i am not sure how to fix it, i have spent the lst 4 hours on this loop alone trying to figure out why it wont work
     print("""Which method would you like to use?
     1. Stack(FIFO)
     2. Queue(LIFO) """)
@@ -45,7 +45,14 @@ while menu_choice != 5:
     elif menu_choice == 2:
         qty_popped = Num_stock.pop()
         price_of_pop = Price.pop()
-        print(f"Removed {qty_popped} from stock. ")
+        profit = (price_of_pop * .1)
+        total_profit += (price_of_pop * .1)
+        print(f"Removed {qty_popped} from stock. price = ${price_of_pop}. sell price : ${profit}")
+    elif menu_choice == 3:
+        print(f" ToTal stock: {total_stock}")
+    elif menu_choice == 4:
+        print(f"Total Profit: ${total_profit}")
+
 
 
 
